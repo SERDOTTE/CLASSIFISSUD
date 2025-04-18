@@ -1,0 +1,45 @@
+.varela-round-regular {
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #0d0c1d;
+    --secondary-color: #474973;
+    --accent1-color: #6d9dc5;
+    --accent2-color: #f1dac4;
+
+    --paragraph-font: "Varela Round", serif;
+    --title-font: 'Montserrat', sans-serif, 700;
+    --primary-font-size: 20px;
+    --principal-text-align: justify;
+    --background-color: #474973;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    background-color: #f1f6fc31;
+}
+section {
+    padding: 54px 0;
+}
+.container__header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+header {
+    background-position: center;
+    background-size: cover;
+    padding: 10px 0;
+    background-attachment: fixed;
+}
+
+
