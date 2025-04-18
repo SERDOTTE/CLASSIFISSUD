@@ -17,13 +17,14 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 400px;
-    position: relative;
+    position: relative; /* Garante que o header seja a referência para o menu */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 5; /* Certifica-se de que o header fique abaixo do menu */
 }
 
 header::before {
@@ -77,10 +78,19 @@ nav {
 }
 
 .nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    position: absolute; /* Garante que o menu seja posicionado em relação ao container */
+    top: 100%; /* Posiciona o menu logo abaixo do header */
+    left: 0;
+    width: 100%; /* Faz o menu ocupar toda a largura */
+    background-color: #fff; /* Cor de fundo para o menu */
+    z-index: 10; /* Garante que o menu fique acima do header */
+    display: none; /* Esconde o menu por padrão */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+}
+
+.nav-menu.active {
+    display: flex; /* Mostra o menu quando ativo */
 }
 
 nav a {
@@ -306,4 +316,4 @@ footer {
     .contact-form {
         padding: 1rem;
     }
-} 
+}
